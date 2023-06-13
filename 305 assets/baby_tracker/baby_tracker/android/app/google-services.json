@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "840431394393",
+    "project_id": "babytracker-af417",
+    "storage_bucket": "babytracker-af417.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840431394393:android:717ef4dff3164b0a445b48",
+        "android_client_info": {
+          "package_name": "au.edu.utas.kit305.baby_tracker.baby_tracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "840431394393-2qv4fj36cnt468phktskln0sb99q6pt7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxXP4wbyE1x0wm05MDxYhMxbAP6Y4PJ-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "840431394393-2qv4fj36cnt468phktskln0sb99q6pt7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "840431394393-daqedrfuv1sse6kn9mt0k0rdt2po0ckg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "au.edu.utas.kit305.babytracker.babyTracker"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
