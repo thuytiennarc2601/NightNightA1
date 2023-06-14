@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Feeding">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/feeding_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/description1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/comfortaa_medium"
+            android:text="@string/choose_event"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/description2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/comfortaa_medium"
+            android:text="@string/choose_options"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/babymealBar" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/breastfeedBar"
+            android:layout_width="300sp"
+            android:layout_height="60sp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rectangle_round_border"
+            android:clickable="false"
+            android:focusable="auto"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description1" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/bottlefeedBar"
+            android:layout_width="300sp"
+            android:layout_height="60sp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rectangle_round_border"
+            android:clickable="false"
+            android:focusable="auto"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/breastfeedBar" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/babymealBar"
+            android:layout_width="300sp"
+            android:layout_height="60sp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rectangle_round_border"
+            android:clickable="false"
+            android:focusable="auto"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bottlefeedBar" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/feedingListBar"
+            android:layout_width="300sp"
+            android:layout_height="60sp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rectangle_round_border"
+            android:clickable="false"
+            android:focusable="auto"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description2" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/feedingSummaryBar"
+            android:layout_width="300sp"
+            android:layout_height="60sp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rectangle_round_border"
+            android:clickable="false"
+            android:focusable="auto"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/feedingListBar" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/feedingChartBar"
+            android:layout_width="300sp"
+            android:layout_height="60sp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rectangle_round_border"
+            android:clickable="false"
+            android:focusable="auto"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/feedingSummaryBar" />
+
+        <ImageView
+            android:id="@+id/breastfeedImg"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_marginStart="30dp"
+            android:clickable="false"
+            android:contentDescription="@string/breastfeeding"
+            android:focusable="auto"
+            android:src="@drawable/breastfeeding"
+            app:layout_constraintBottom_toBottomOf="@+id/breastfeedBar"
+            app:layout_constraintStart_toStartOf="@+id/breastfeedBar"
+            app:layout_constraintTop_toTopOf="@+id/breastfeedBar" />
+
+        <ImageView
+            android:id="@+id/bottlefeedImg"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_marginStart="30dp"
+            android:contentDescription="@string/bottlefeeding"
+            android:src="@drawable/milk_bottle"
+            app:layout_constraintBottom_toBottomOf="@+id/bottlefeedBar"
+            app:layout_constraintStart_toStartOf="@+id/bottlefeedBar"
+            app:layout_constraintTop_toTopOf="@+id/bottlefeedBar" />
+
+        <ImageView
+            android:id="@+id/babymealImg"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_marginStart="30dp"
+            android:contentDescription="@string/baby_meal"
+            android:src="@drawable/baby_food"
+            app:layout_constraintBottom_toBottomOf="@+id/babymealBar"
+            app:layout_constraintStart_toStartOf="@+id/babymealBar"
+            app:layout_constraintTop_toTopOf="@+id/babymealBar" />
+
+        <TextView
+            android:id="@+id/breastfeedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="auto"
+            android:fontFamily="@font/comfortaa_medium"
+            android:text="@string/breastfeeding"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/breastfeedBar"
+            app:layout_constraintEnd_toEndOf="@+id/breastfeedBar"
+            app:layout_constraintStart_toStartOf="@+id/breastfeedBar"
+            app:layout_constraintTop_toTopOf="@+id/breastfeedBar" />
+
+        <TextView
+            android:id="@+id/bottlefeedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="auto"
+            android:fontFamily="@font/comfortaa_medium"
+            android:text="@string/bottlefeeding"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/bottlefeedBar"
+            app:layout_constraintEnd_toEndOf="@+id/bottlefeedBar"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="@+id/bottlefeedBar"
+            app:layout_constraintTop_toTopOf="@+id/bottlefeedBar" />
+
+        <TextView
+            android:id="@+id/babymealText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:clickable="false"
+            android:focusable="auto"
+            android:fontFamily="@font/comfortaa_medium"
+            android:text="@string/baby_meal"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/babymealBar"
+            app:layout_constraintEnd_toEndOf="@+id/babymealBar"
+            app:layout_constraintStart_toStartOf="@+id/babymealBar"
+            app:layout_constraintTop_toTopOf="@+id/babymealBar" />
+
+        <TextView
+            android:id="@+id/feedingListText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="auto"
+            android:fontFamily="@font/comfortaa_medium"
+            android:text="@string/feeding_list"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/feedingListBar"
+            app:layout_constraintEnd_toEndOf="@+id/feedingListBar"
+            app:layout_constraintStart_toStartOf="@+id/feedingListBar"
+            app:layout_constraintTop_toTopOf="@+id/feedingListBar" />
+
+        <TextView
+            android:id="@+id/summaryFeedingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="auto"
+            android:fontFamily="@font/comfortaa_medium"
+            android:text="@string/feeding_summary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/feedingSummaryBar"
+            app:layout_constraintEnd_toEndOf="@+id/feedingSummaryBar"
+            app:layout_constraintStart_toStartOf="@+id/feedingSummaryBar"
+            app:layout_constraintTop_toTopOf="@+id/feedingSummaryBar" />
+
+        <TextView
+            android:id="@+id/feedingChartText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="auto"
+            android:fontFamily="@font/comfortaa_medium"
+            android:text="@string/chart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/feedingChartBar"
+            app:layout_constraintEnd_toEndOf="@+id/feedingChartBar"
+            app:layout_constraintStart_toStartOf="@+id/feedingChartBar"
+            app:layout_constraintTop_toTopOf="@+id/feedingChartBar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

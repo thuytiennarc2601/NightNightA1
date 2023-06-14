@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewSummaries">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/listTopBar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/listTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_semibold"
+        android:text="@string/example"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/listTopBar2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/listTopBar2" />
+
+    <ImageButton
+        android:id="@+id/listBackButton2"
+        style="@android:style/Widget.Material.Light.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/listTopBar2"
+        app:layout_constraintStart_toStartOf="@+id/listTopBar2"
+        app:layout_constraintTop_toTopOf="@+id/listTopBar2"
+        app:srcCompat="@drawable/go_back" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="90sp"
+        android:background="@color/blue_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/listFeedingIcon2"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:contentDescription="@string/feedings"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/listNappyIcon2"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar3"
+        app:srcCompat="@drawable/eating" />
+
+    <ImageView
+        android:id="@+id/listNappyIcon2"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:contentDescription="@string/nappies"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar3"
+        app:layout_constraintStart_toEndOf="@+id/listFeedingIcon2"
+        app:layout_constraintEnd_toStartOf="@+id/listSleepIcon2"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar3"
+        app:srcCompat="@drawable/diaper" />
+
+    <ImageView
+        android:id="@+id/listSleepIcon2"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:contentDescription="@string/sleeps"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/listNappyIcon2"
+        app:layout_constraintEnd_toStartOf="@+id/listActivityIcon2"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar3"
+        app:srcCompat="@drawable/sleep" />
+
+    <ImageView
+        android:id="@+id/listActivityIcon2"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:contentDescription="@string/activities"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/listSleepIcon2"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar3"
+        app:layout_constraintVertical_bias="0.523"
+        app:srcCompat="@drawable/teddy" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/summaryContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/materialToolbar3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listTopBar2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

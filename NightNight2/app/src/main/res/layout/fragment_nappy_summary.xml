@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.NappySummary">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sleepSummaryContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/sNappyDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_primary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nappyDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa_semibold"
+            android:text="@string/example"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/sNappyDate"
+            app:layout_constraintEnd_toEndOf="@+id/sNappyDate"
+            app:layout_constraintStart_toStartOf="@+id/sNappyDate"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/nappyChooseDateBtn"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/back"
+            app:layout_constraintBottom_toBottomOf="@+id/nappyDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/nappyDate"
+            app:srcCompat="@drawable/next" />
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/nappySummaryContainer"
+            android:layout_width="0dp"
+            android:layout_height="300sp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/rectangle_dard_blue_border"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sNappyDate" />
+
+        <TextView
+            android:id="@+id/totalNappies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/total_nappies"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/nappySummaryContainer"
+            app:layout_constraintTop_toTopOf="@+id/nappySummaryContainer" />
+
+        <TextView
+            android:id="@+id/totalNappies2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/total_wet"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/peeIcon"
+            app:layout_constraintStart_toEndOf="@+id/peeIcon"
+            app:layout_constraintTop_toTopOf="@+id/peeIcon" />
+
+        <TextView
+            android:id="@+id/totalWet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/example"
+            android:textColor="@color/red_secondary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/totalNappies2"
+            app:layout_constraintStart_toEndOf="@+id/totalNappies2"
+            app:layout_constraintTop_toTopOf="@+id/totalNappies2" />
+
+        <TextView
+            android:id="@+id/totalDry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/example"
+            android:textColor="@color/red_secondary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/totalNappies3"
+            app:layout_constraintStart_toEndOf="@+id/totalNappies3"
+            app:layout_constraintTop_toTopOf="@+id/totalNappies3" />
+
+        <TextView
+            android:id="@+id/totalMixed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/example"
+            android:textColor="@color/red_secondary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/totalNappies4"
+            app:layout_constraintStart_toEndOf="@+id/totalNappies4"
+            app:layout_constraintTop_toTopOf="@+id/totalNappies4" />
+
+        <TextView
+            android:id="@+id/totalNappies3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/total_poop"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+        <TextView
+            android:id="@+id/totalNappies4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/total_both"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+        <ImageView
+            android:id="@+id/peeIcon"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/pee"
+            android:src="@drawable/pee"
+            app:layout_constraintStart_toStartOf="@+id/totalNappies"
+            app:layout_constraintTop_toBottomOf="@+id/totalNappies" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/poop"
+            android:src="@drawable/poo"
+            app:layout_constraintStart_toStartOf="@+id/peeIcon"
+            app:layout_constraintTop_toBottomOf="@+id/peeIcon" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/total_both"
+            android:src="@drawable/both"
+            app:layout_constraintStart_toStartOf="@+id/peeIcon"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

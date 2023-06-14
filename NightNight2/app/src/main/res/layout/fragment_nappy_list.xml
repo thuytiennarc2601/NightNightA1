@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nappyList"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.NappyList">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sleepSummaryContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/nappyDateContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_primary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nappyDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa_semibold"
+            android:text="@string/example"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/nappyDateContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/nappyDateContainer"
+            app:layout_constraintTop_toTopOf="@+id/nappyDateContainer" />
+
+        <ImageView
+            android:id="@+id/nappyChooseDateBtn"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_marginEnd="15dp"
+            android:contentDescription="@string/back"
+            app:layout_constraintBottom_toBottomOf="@+id/nappyDate"
+            app:layout_constraintEnd_toEndOf="@+id/nappyDateContainer"
+            app:layout_constraintTop_toTopOf="@+id/nappyDate"
+            app:srcCompat="@drawable/next" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nappySummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/blue_primary"
+            android:fontFamily="@font/comfortaa_semibold"
+            android:padding="5sp"
+            android:text="@string/summary"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/nappyChart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nappyDateContainer" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nappyChart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_primary"
+            android:fontFamily="@font/comfortaa_semibold"
+            android:padding="5sp"
+            android:text="@string/chart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/nappySummary"
+            app:layout_constraintTop_toTopOf="@+id/nappySummary" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/nappyListHolder"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/nappyNoRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_record"
+            android:textColor="@color/grey_secondary"
+            android:textSize="34sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nappySummary" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/comfortaa_regular"
+            android:text="@string/image_instruction"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nappySummary" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

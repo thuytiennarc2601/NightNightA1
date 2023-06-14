@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FeedingSummary">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/feedingSDateCon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_primary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/feedingSDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa_semibold"
+            android:text="@string/example"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/feedingSDateCon"
+            app:layout_constraintEnd_toEndOf="@+id/feedingSDateCon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/feedingSDateCon" />
+
+        <ImageView
+            android:id="@+id/nappyChooseDateBtn4"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/back"
+            app:layout_constraintBottom_toBottomOf="@+id/feedingSDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/feedingSDate"
+            app:srcCompat="@drawable/next" />
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/nappySummaryContainer2"
+            android:layout_width="0dp"
+            android:layout_height="200sp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/rectangle_dard_blue_border"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/feedingSDateCon" />
+
+        <TextView
+            android:id="@+id/breastFeedingLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/breastfeeding"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/breastfeedingIcon"
+            app:layout_constraintStart_toEndOf="@+id/breastfeedingIcon"
+            app:layout_constraintTop_toTopOf="@+id/breastfeedingIcon" />
+
+        <TextView
+            android:id="@+id/totalBreastfeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/total_breastfeed"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/breastfeedingIcon"
+            app:layout_constraintTop_toBottomOf="@+id/breastfeedingIcon" />
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/nappySummaryContainer3"
+            android:layout_width="0dp"
+            android:layout_height="200sp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/rectangle_dard_blue_border"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nappySummaryContainer2" />
+
+        <ImageView
+            android:id="@+id/breastfeedingIcon"
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/breastfeeding"
+            app:layout_constraintStart_toStartOf="@+id/nappySummaryContainer2"
+            app:layout_constraintTop_toTopOf="@+id/nappySummaryContainer2" />
+
+        <ImageView
+            android:id="@+id/bottleFeedingIcon"
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/breastfeeding"
+            app:layout_constraintStart_toStartOf="@+id/nappySummaryContainer3"
+            app:layout_constraintTop_toTopOf="@+id/nappySummaryContainer3"
+            app:srcCompat="@drawable/milk_bottle" />
+
+        <TextView
+            android:id="@+id/bottleFeedingLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/bottlefeeding"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/bottleFeedingIcon"
+            app:layout_constraintStart_toEndOf="@+id/bottleFeedingIcon"
+            app:layout_constraintTop_toTopOf="@+id/bottleFeedingIcon" />
+
+        <TextView
+            android:id="@+id/totalBottlefeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/total_bottlefeed"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/bottleFeedingIcon"
+            app:layout_constraintTop_toBottomOf="@+id/bottleFeedingLabel" />
+
+        <TextView
+            android:id="@+id/totalBottlefeed3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/total_amout"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/bottleFeedingIcon"
+            app:layout_constraintTop_toBottomOf="@+id/totalBottlefeed" />
+
+        <TextView
+            android:id="@+id/totalBottlefeed4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/total_feeding_time"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/bottleFeedingIcon"
+            app:layout_constraintTop_toBottomOf="@+id/totalBottlefeed3" />
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/feedingSDateCon2"
+            android:layout_width="160sp"
+            android:layout_height="40sp"
+            android:layout_marginTop="20dp"
+            android:background="@color/grey_primary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toStartOf="@+id/feedingSDateCon3"
+            app:layout_constraintStart_toStartOf="@+id/totalBreastfeed"
+            app:layout_constraintTop_toBottomOf="@+id/totalBreastfeed" />
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/feedingSDateCon3"
+            android:layout_width="160sp"
+            android:layout_height="40sp"
+            android:layout_marginStart="10dp"
+            android:background="@color/yellow_primary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/feedingSDateCon2"
+            app:layout_constraintTop_toTopOf="@+id/feedingSDateCon2" />
+
+        <TextView
+            android:id="@+id/totalBreastfeed3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/total_feeding_time"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/nappySummaryContainer2"
+            app:layout_constraintStart_toStartOf="@+id/totalBreastfeed"
+            app:layout_constraintTop_toBottomOf="@+id/feedingSDateCon2" />
+
+        <TextView
+            android:id="@+id/totalLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/timer_example"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/feedingSDateCon2"
+            app:layout_constraintEnd_toEndOf="@+id/feedingSDateCon2"
+            app:layout_constraintStart_toStartOf="@+id/feedingSDateCon2"
+            app:layout_constraintTop_toTopOf="@+id/feedingSDateCon2" />
+
+        <TextView
+            android:id="@+id/totalRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/timer_example"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/feedingSDateCon3"
+            app:layout_constraintEnd_toEndOf="@+id/feedingSDateCon3"
+            app:layout_constraintStart_toStartOf="@+id/feedingSDateCon3"
+            app:layout_constraintTop_toTopOf="@+id/feedingSDateCon3" />
+
+        <TextView
+            android:id="@+id/totalBreastfeedTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/example"
+            android:textColor="@color/red_secondary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/totalBreastfeed3"
+            app:layout_constraintStart_toEndOf="@+id/totalBreastfeed3"
+            app:layout_constraintTop_toTopOf="@+id/totalBreastfeed3" />
+
+        <TextView
+            android:id="@+id/totalMilkAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/example"
+            android:textColor="@color/red_secondary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/totalBottlefeed3"
+            app:layout_constraintStart_toEndOf="@+id/totalBottlefeed3"
+            app:layout_constraintTop_toTopOf="@+id/totalBottlefeed3" />
+
+        <TextView
+            android:id="@+id/totalBottlefeedTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/example"
+            android:textColor="@color/red_secondary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/totalBottlefeed4"
+            app:layout_constraintStart_toEndOf="@+id/totalBottlefeed4"
+            app:layout_constraintTop_toTopOf="@+id/totalBottlefeed4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

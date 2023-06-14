@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SleepSummary">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sleepSummaryContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/sSleepDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_primary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/sumSleepDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa_semibold"
+            android:text="@string/example"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/sSleepDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/sSleepDate"
+            app:layout_constraintTop_toTopOf="@+id/sSleepDate" />
+
+        <ImageView
+            android:id="@+id/nappyChooseDateBtn"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/back"
+            app:layout_constraintBottom_toBottomOf="@+id/sumSleepDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sumSleepDate"
+            app:srcCompat="@drawable/next" />
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/nappySummaryContainer"
+            android:layout_width="0dp"
+            android:layout_height="150sp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/rectangle_dard_blue_border"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sSleepDate" />
+
+        <TextView
+            android:id="@+id/totalSleepDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/example"
+            android:textColor="@color/red_secondary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/totalNappies6"
+            app:layout_constraintStart_toEndOf="@+id/totalNappies6"
+            app:layout_constraintTop_toTopOf="@+id/totalNappies6" />
+
+        <TextView
+            android:id="@+id/totalSleepTimes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/total_sleep_time"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/nappySummaryContainer"
+            app:layout_constraintTop_toTopOf="@+id/nappySummaryContainer" />
+
+        <TextView
+            android:id="@+id/totalNappies6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/total_sleep_duration"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/totalSleepTimes"
+            app:layout_constraintTop_toBottomOf="@+id/totalSleepTimes" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

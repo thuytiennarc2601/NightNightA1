@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddBottleFeeding">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/bTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@color/grey_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/bBackButton"
+        style="@android:style/Widget.Material.Light.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/bTopBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bTopBar"
+        app:srcCompat="@drawable/go_back" />
+
+    <TextView
+        android:id="@+id/bTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_semibold"
+        android:text="@string/bottle_add"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bTopBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/bTopBar"
+        app:layout_constraintTop_toTopOf="@+id/bTopBar" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/bLastEventContainer"
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/grey_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bTopBar" />
+
+    <TextView
+        android:id="@+id/bLastEventLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/brf_last_event_time"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/bLastAmountLabel"
+        app:layout_constraintStart_toStartOf="@+id/bLastEventContainer"
+        app:layout_constraintTop_toTopOf="@+id/bLastEventContainer" />
+
+    <TextView
+        android:id="@+id/bLastStartTime"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/example"
+        android:textColor="@color/red_secondary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bLastEventLabel"
+        app:layout_constraintStart_toEndOf="@+id/bLastEventLabel"
+        app:layout_constraintTop_toTopOf="@+id/bLastEventLabel" />
+
+    <TextView
+        android:id="@+id/bDurationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/start_record"
+        android:textColor="@color/blue_primary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/bStartLabel"
+        app:layout_constraintTop_toBottomOf="@+id/bstartTimePicker" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/bBottleTimer"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/rectangle_light_grey_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="@+id/bLastEventContainer"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bLastEventContainer"
+        app:layout_constraintTop_toBottomOf="@+id/bDurationLabel" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/bRestartButton"
+        android:layout_width="140sp"
+        android:layout_height="45sp"
+        android:layout_marginTop="10dp"
+        android:background="@color/blue_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="@+id/bBottleTimer"
+        app:layout_constraintTop_toBottomOf="@+id/bBottleTimer" />
+
+    <TextView
+        android:id="@+id/sRestartLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/restart"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bRestartButton"
+        app:layout_constraintEnd_toEndOf="@+id/bRestartButton"
+        app:layout_constraintStart_toEndOf="@+id/sRestartIcon2"
+        app:layout_constraintTop_toTopOf="@+id/bRestartButton" />
+
+    <ImageView
+        android:id="@+id/sRestartIcon2"
+        android:layout_width="25sp"
+        android:layout_height="25sp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/bRestartButton"
+        app:layout_constraintEnd_toStartOf="@+id/sRestartLabel2"
+        app:layout_constraintStart_toStartOf="@+id/bRestartButton"
+        app:layout_constraintTop_toTopOf="@+id/bRestartButton"
+        app:srcCompat="@drawable/restart" />
+
+    <EditText
+        android:id="@+id/bTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:ems="10"
+        android:fontFamily="@font/comfortaa_bold"
+        android:hint="@string/timer_example"
+        android:inputType="textPersonName"
+        android:maxLength="8"
+        android:text="@string/timer_example"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bBottleTimer"
+        app:layout_constraintEnd_toEndOf="@+id/bBottleTimer"
+        app:layout_constraintStart_toStartOf="@+id/bBottleTimer"
+        app:layout_constraintTop_toBottomOf="@+id/bDurationLabel" />
+
+    <ImageView
+        android:id="@+id/bPlayIcon"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_marginStart="5dp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/bBottleTimer"
+        app:layout_constraintStart_toStartOf="@+id/bBottleTimer"
+        app:layout_constraintTop_toTopOf="@+id/bBottleTimer"
+        app:srcCompat="@drawable/play" />
+
+    <TextView
+        android:id="@+id/bLastAmountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/last_amount"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/bLastEventContainer"
+        app:layout_constraintTop_toBottomOf="@+id/bLastEventLabel"
+        app:layout_constraintBottom_toTopOf="@+id/bLastAmountLabel2"/>
+
+    <TextView
+        android:id="@+id/bLastAmountLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/duration"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bLastEventContainer"
+        app:layout_constraintStart_toStartOf="@+id/bLastEventContainer"
+        app:layout_constraintTop_toBottomOf="@+id/bLastAmountLabel" />
+
+    <TextView
+        android:id="@+id/bLastAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/example"
+        android:textAllCaps="true"
+        android:textColor="@color/red_secondary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bLastAmountLabel"
+        app:layout_constraintStart_toEndOf="@+id/bLastAmountLabel"
+        app:layout_constraintTop_toTopOf="@+id/bLastAmountLabel" />
+
+    <TextView
+        android:id="@+id/bLastDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/example"
+        android:textColor="@color/red_secondary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bLastAmountLabel2"
+        app:layout_constraintStart_toEndOf="@+id/bLastAmountLabel2"
+        app:layout_constraintTop_toTopOf="@+id/bLastAmountLabel2" />
+
+    <TextView
+        android:id="@+id/bStartLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/f_start_at"
+        android:textColor="@color/blue_primary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/bLastAmountLabel"
+        app:layout_constraintTop_toBottomOf="@+id/bLastEventContainer" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/bstartTimePicker"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/rectangle_grey_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="@+id/bLastEventContainer"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bLastEventContainer"
+        app:layout_constraintTop_toBottomOf="@+id/bStartLabel" />
+
+    <TextView
+        android:id="@+id/bTimePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/time_stamp"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bstartTimePicker"
+        app:layout_constraintEnd_toEndOf="@+id/bstartTimePicker"
+        app:layout_constraintStart_toStartOf="@+id/bstartTimePicker"
+        app:layout_constraintTop_toTopOf="@+id/bstartTimePicker" />
+
+    <ImageView
+        android:id="@+id/bNextButton"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/bstartTimePicker"
+        app:layout_constraintEnd_toEndOf="@+id/bstartTimePicker"
+        app:layout_constraintTop_toTopOf="@+id/bstartTimePicker"
+        app:srcCompat="@drawable/next" />
+
+    <TextView
+        android:id="@+id/bAmountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/enter_amount"
+        android:textColor="@color/blue_primary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/bstartTimePicker"
+        app:layout_constraintTop_toBottomOf="@+id/bRestartButton" />
+
+    <EditText
+        android:id="@+id/bAmount"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/rectangle_grey_border"
+        android:ems="10"
+        android:fontFamily="@font/comfortaa_bold"
+        android:hint="@string/amount"
+        android:inputType="textPersonName"
+        android:padding="8sp"
+        android:singleLine="true"
+        android:text="@string/amount_example"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="@+id/bLastEventContainer"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/bLastAmountLabel"
+        app:layout_constraintTop_toBottomOf="@+id/bAmountLabel" />
+
+    <TextView
+        android:id="@+id/bNoteLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/note"
+        android:textColor="@color/blue_primary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/bLastAmountLabel"
+        app:layout_constraintTop_toBottomOf="@+id/bAmount" />
+
+    <EditText
+        android:id="@+id/bNoteTxt"
+        android:layout_width="0dp"
+        android:layout_height="120sp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/rectangle_grey_border"
+        android:ems="10"
+        android:fontFamily="@font/comfortaa_medium"
+        android:hint="@string/enterNote"
+        android:inputType="textPersonName"
+        android:padding="8sp"
+        android:singleLine="false"
+        android:text="@string/note_content"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/bLastEventContainer"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/bLastEventContainer"
+        app:layout_constraintTop_toBottomOf="@+id/bNoteLabel" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bSaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/blue_primary"
+        android:fontFamily="@font/comfortaa_semibold"
+        android:padding="5sp"
+        android:text="@string/save"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/bLastEventContainer"
+        app:layout_constraintEnd_toStartOf = "@+id/bClearButton"
+        app:layout_constraintTop_toBottomOf="@+id/bNoteTxt" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bClearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/red_primary"
+        android:fontFamily="@font/comfortaa_semibold"
+        android:padding="5sp"
+        android:text="@string/clear_record"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/bNoteTxt"
+        app:layout_constraintStart_toEndOf="@+id/bSaveButton"
+        app:layout_constraintTop_toBottomOf="@+id/bNoteTxt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

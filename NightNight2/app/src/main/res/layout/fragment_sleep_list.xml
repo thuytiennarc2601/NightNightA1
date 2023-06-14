@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sleepList"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SleepList">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sleepListContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/sleepDateContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_primary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/sleepDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa_semibold"
+            android:text="@string/example"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/sleepDateContainer"
+            app:layout_constraintEnd_toEndOf="@+id/sleepDateContainer"
+            app:layout_constraintStart_toStartOf="@+id/sleepDateContainer"
+            app:layout_constraintTop_toTopOf="@+id/sleepDateContainer"
+            app:layout_constraintVertical_bias="0.592" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sleepSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/blue_primary"
+            android:fontFamily="@font/comfortaa_semibold"
+            android:padding="5sp"
+            android:text="@string/summary"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/sleepChart"
+            app:layout_constraintTop_toBottomOf="@+id/sleepDateContainer" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sleepChart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/blue_primary"
+            android:fontFamily="@font/comfortaa_semibold"
+            android:padding="5sp"
+            android:text="@string/chart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/sleepSummary"
+            app:layout_constraintTop_toBottomOf="@+id/sleepDateContainer" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/sleepListHolder"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sleepSummary" />
+
+        <ImageView
+            android:id="@+id/nappyChooseDateBtn3"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_marginEnd="15dp"
+            android:contentDescription="@string/back"
+            app:layout_constraintBottom_toBottomOf="@+id/sleepDate"
+            app:layout_constraintEnd_toEndOf="@+id/sleepDateContainer"
+            app:layout_constraintTop_toTopOf="@+id/sleepDate"
+            app:srcCompat="@drawable/next" />
+
+        <TextView
+            android:id="@+id/sleepNoRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_record"
+            android:textSize="40sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sleepSummary" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

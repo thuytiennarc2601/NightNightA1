@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/sleepContainer"
+        android:layout_width="0dp"
+        android:layout_height="120sp"
+        android:background="@drawable/rectangle_dard_blue_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sleepTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/mplus_bold"
+        android:text="@string/time_stamp"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/sleepContainer"
+        app:layout_constraintTop_toTopOf="@+id/sleepContainer" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintStart_toEndOf="@+id/sleepTime"
+        app:layout_constraintTop_toTopOf="@+id/sleepTime"
+        app:srcCompat="@drawable/zzz" />
+
+    <ImageView
+        android:id="@+id/sleepDeleteButton"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
+        android:layout_marginEnd="15dp"
+        android:contentDescription="@string/nappy_record_image"
+        app:layout_constraintBottom_toBottomOf="@+id/sleepTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sleepTime"
+        app:srcCompat="@drawable/remove" />
+
+    <ImageView
+        android:id="@+id/sleepEditButton"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
+        android:layout_marginEnd="15dp"
+        android:contentDescription="@string/nappy_record_image"
+        app:layout_constraintBottom_toBottomOf="@+id/sleepTime"
+        app:layout_constraintEnd_toStartOf="@+id/sleepDeleteButton"
+        app:layout_constraintTop_toTopOf="@+id/sleepTime"
+        app:srcCompat="@drawable/edit" />
+
+    <TextView
+        android:id="@+id/sleepDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/name_example"
+        android:textAlignment="textStart"
+        android:textColor="@color/blue_secondary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/topBar"
+        app:layout_constraintStart_toStartOf="@+id/sleepTime"
+        app:layout_constraintTop_toBottomOf="@+id/sleepTime" />
+
+    <TextView
+        android:id="@+id/sleepNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/name_example"
+        android:textAlignment="textStart"
+        android:textColor="@color/grey_secondary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/sleepContainer"
+        app:layout_constraintEnd_toEndOf="@+id/topBar"
+        app:layout_constraintStart_toStartOf="@+id/sleepDuration"
+        app:layout_constraintTop_toBottomOf="@+id/sleepDuration" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/sleepSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="5sp"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sleepContainer" />
+</androidx.constraintlayout.widget.ConstraintLayout>

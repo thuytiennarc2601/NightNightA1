@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editNappyPanel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/editNappyTime"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/rectangle_grey_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nStartLabel2"
+        app:layout_constraintTop_toBottomOf="@+id/nStartLabel2" />
+
+    <TextView
+        android:id="@+id/nTimePicker2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/time_stamp"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/editNappyTime"
+        app:layout_constraintEnd_toEndOf="@+id/editNappyTime"
+        app:layout_constraintStart_toStartOf="@+id/editNappyTime"
+        app:layout_constraintTop_toTopOf="@+id/editNappyTime" />
+
+    <TextView
+        android:id="@+id/nStartLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/nappy_choose_time"
+        android:textColor="@color/blue_primary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/nNextButton2"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/editNappyTime"
+        app:layout_constraintEnd_toEndOf="@+id/editNappyTime"
+        app:layout_constraintTop_toTopOf="@+id/editNappyTime"
+        app:srcCompat="@drawable/next" />
+
+    <TextView
+        android:id="@+id/nConditionLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/nappy_choose_type"
+        android:textColor="@color/blue_primary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/nStartLabel2"
+        app:layout_constraintTop_toBottomOf="@+id/editNappyTime" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/nappyPee"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/rectangle_grey_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toStartOf="@+id/nappyPoo"
+        app:layout_constraintStart_toStartOf="@+id/editNappyTime"
+        app:layout_constraintTop_toBottomOf="@+id/nConditionLabel2" />
+
+    <ImageView
+        android:id="@+id/nPeeIcon2"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_marginStart="10dp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/nappyPee"
+        app:layout_constraintEnd_toStartOf="@+id/nPeeLabel2"
+        app:layout_constraintStart_toStartOf="@+id/nappyPee"
+        app:layout_constraintTop_toTopOf="@+id/nappyPee"
+        app:srcCompat="@drawable/pee" />
+
+    <TextView
+        android:id="@+id/nPeeLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/pee"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nPeeIcon2"
+        app:layout_constraintEnd_toEndOf="@+id/nappyPee"
+        app:layout_constraintStart_toEndOf="@+id/nPeeIcon2"
+        app:layout_constraintTop_toTopOf="@+id/nPeeIcon2" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/nappyPoo"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/rectangle_grey_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toStartOf="@+id/nappyBoth"
+        app:layout_constraintStart_toEndOf="@+id/nappyPee"
+        app:layout_constraintTop_toTopOf="@+id/nappyPee" />
+
+    <ImageView
+        android:id="@+id/nPooIcon2"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/nappyPoo"
+        app:layout_constraintEnd_toStartOf="@+id/nPooLabel2"
+        app:layout_constraintStart_toStartOf="@+id/nappyPoo"
+        app:layout_constraintTop_toTopOf="@+id/nappyPoo"
+        app:srcCompat="@drawable/poo" />
+
+    <TextView
+        android:id="@+id/nPooLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/poop"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nPooIcon2"
+        app:layout_constraintEnd_toEndOf="@+id/nappyPoo"
+        app:layout_constraintStart_toEndOf="@+id/nPooIcon2"
+        app:layout_constraintTop_toTopOf="@+id/nPooIcon2" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/nappyBoth"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/rectangle_grey_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="@+id/editNappyTime"
+        app:layout_constraintStart_toEndOf="@+id/nappyPoo"
+        app:layout_constraintTop_toTopOf="@+id/nappyPee" />
+
+    <ImageView
+        android:id="@+id/nBothIcon2"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/nappyBoth"
+        app:layout_constraintEnd_toStartOf="@+id/nBothLabel2"
+        app:layout_constraintStart_toStartOf="@+id/nappyBoth"
+        app:layout_constraintTop_toTopOf="@+id/nappyBoth"
+        app:srcCompat="@drawable/both" />
+
+    <TextView
+        android:id="@+id/nBothLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/mixed"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nappyBoth"
+        app:layout_constraintEnd_toEndOf="@+id/nappyBoth"
+        app:layout_constraintStart_toEndOf="@+id/nBothIcon2"
+        app:layout_constraintTop_toTopOf="@+id/nappyBoth" />
+
+    <TextView
+        android:id="@+id/nImageLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/nappy_record_image"
+        android:textColor="@color/blue_primary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/editNappyTime"
+        app:layout_constraintTop_toBottomOf="@+id/nappyPoo" />
+
+    <ImageView
+        android:id="@+id/nappyImage"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/upload"
+        app:layout_constraintStart_toStartOf="@+id/editNappyTime"
+        app:layout_constraintTop_toBottomOf="@+id/nImageLabel2"
+        app:srcCompat="@drawable/poop" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/nappyUpload"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/rectangle_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="@+id/editNappyTime"
+        app:layout_constraintStart_toEndOf="@+id/nappyImage"
+        app:layout_constraintTop_toTopOf="@+id/nappyImage" />
+
+    <ImageView
+        android:id="@+id/nUploadIcon2"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/nappyUpload"
+        app:layout_constraintEnd_toStartOf="@+id/nUploadLabel2"
+        app:layout_constraintStart_toStartOf="@+id/nappyUpload"
+        app:layout_constraintTop_toTopOf="@+id/nappyUpload"
+        app:srcCompat="@drawable/upload" />
+
+    <TextView
+        android:id="@+id/nUploadLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/nappy_upload"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nUploadIcon2"
+        app:layout_constraintEnd_toEndOf="@+id/nappyUpload"
+        app:layout_constraintStart_toEndOf="@+id/nUploadIcon2"
+        app:layout_constraintTop_toTopOf="@+id/nUploadIcon2" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/nappyRemove"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/rectangle_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="@+id/nappyImage"
+        app:layout_constraintEnd_toEndOf="@+id/editNappyTime"
+        app:layout_constraintStart_toEndOf="@+id/nappyImage" />
+
+    <ImageView
+        android:id="@+id/nRemoveIcon2"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/nappyRemove"
+        app:layout_constraintEnd_toStartOf="@+id/nRemoveLabel2"
+        app:layout_constraintStart_toStartOf="@+id/nappyRemove"
+        app:layout_constraintTop_toTopOf="@+id/nappyRemove"
+        app:srcCompat="@drawable/remove" />
+
+    <TextView
+        android:id="@+id/nRemoveLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/nappy_remove"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nappyRemove"
+        app:layout_constraintEnd_toEndOf="@+id/nappyRemove"
+        app:layout_constraintStart_toEndOf="@+id/nRemoveIcon2"
+        app:layout_constraintTop_toTopOf="@+id/nappyRemove" />
+
+    <TextView
+        android:id="@+id/nNoteLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/note"
+        android:textColor="@color/blue_primary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/editNappyTime"
+        app:layout_constraintTop_toBottomOf="@+id/nappyImage" />
+
+    <EditText
+        android:id="@+id/nNoteTxt2"
+        android:layout_width="0dp"
+        android:layout_height="120sp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle_grey_border"
+        android:ems="10"
+        android:fontFamily="@font/comfortaa_medium"
+        android:hint="@string/enterHint"
+        android:inputType="textPersonName"
+        android:padding="8sp"
+        android:singleLine="false"
+        android:text="@string/note_content"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/editNappyTime"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editNappyTime"
+        app:layout_constraintTop_toBottomOf="@+id/nNoteLabel2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nSaveButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/blue_primary"
+        android:fontFamily="@font/comfortaa_semibold"
+        android:padding="5sp"
+        android:text="@string/update_record"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nClearButton2"
+        app:layout_constraintStart_toStartOf="@+id/editNappyTime"
+        app:layout_constraintTop_toBottomOf="@+id/nNoteTxt2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nClearButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/red_primary"
+        android:fontFamily="@font/comfortaa_semibold"
+        android:padding="5sp"
+        android:text="@string/delete"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editNappyTime"
+        app:layout_constraintStart_toEndOf="@+id/nSaveButton2"
+        app:layout_constraintTop_toBottomOf="@+id/nNoteTxt2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

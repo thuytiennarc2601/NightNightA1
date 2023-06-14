@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddBabymeal">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/bmTopbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@color/grey_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/bmBackButton"
+        style="@android:style/Widget.Material.Light.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/bmTopbar"
+        app:layout_constraintStart_toStartOf="@+id/bmTopbar"
+        app:layout_constraintTop_toTopOf="@+id/bmTopbar"
+        app:srcCompat="@drawable/go_back" />
+
+    <TextView
+        android:id="@+id/bmTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_semibold"
+        android:text="@string/adding_meal"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bmTopbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/bmTopbar"
+        app:layout_constraintTop_toTopOf="@+id/bmTopbar" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/bmLastMealEvent"
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/grey_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmTopbar" />
+
+    <TextView
+        android:id="@+id/bmLastMeatTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/last_meal_time"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/bmLastRecipe"
+        app:layout_constraintStart_toStartOf="@+id/bmLastMealEvent"
+        app:layout_constraintTop_toTopOf="@+id/bmLastMealEvent" />
+
+    <TextView
+        android:id="@+id/bmLastTime"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/example"
+        android:textColor="@color/red_secondary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/brfLastEventLabel"
+        app:layout_constraintStart_toEndOf="@+id/bmLastMeatTime"
+        app:layout_constraintTop_toTopOf="@+id/bmLastMeatTime" />
+
+    <TextView
+        android:id="@+id/bmLastRecipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/ate_what"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bmLastMealEvent"
+        app:layout_constraintStart_toStartOf="@+id/bmLastMealEvent"
+        app:layout_constraintTop_toBottomOf="@+id/bmLastMeatTime" />
+
+    <TextView
+        android:id="@+id/bmLastDish"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/example"
+        android:textColor="@color/red_secondary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bmLastRecipe"
+        app:layout_constraintStart_toEndOf="@+id/bmLastRecipe"
+        app:layout_constraintTop_toTopOf="@+id/bmLastRecipe" />
+
+    <TextView
+        android:id="@+id/bmStartLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/f_start_at"
+        android:textColor="@color/blue_primary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/bmLastMealEvent"
+        app:layout_constraintTop_toBottomOf="@+id/bmLastMealEvent" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/bmStartTimePicker"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle_grey_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="@+id/bmLastMealEvent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bmLastMealEvent"
+        app:layout_constraintTop_toBottomOf="@+id/bmStartLabel" />
+
+    <TextView
+        android:id="@+id/bmTimePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/time_stamp"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bmStartTimePicker"
+        app:layout_constraintEnd_toEndOf="@+id/bmStartTimePicker"
+        app:layout_constraintStart_toStartOf="@+id/bmStartTimePicker"
+        app:layout_constraintTop_toTopOf="@+id/bmStartTimePicker" />
+
+    <ImageView
+        android:id="@+id/bmNextButton"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/bmStartTimePicker"
+        app:layout_constraintEnd_toEndOf="@+id/bmStartTimePicker"
+        app:layout_constraintTop_toTopOf="@+id/bmStartTimePicker"
+        app:srcCompat="@drawable/next" />
+
+    <TextView
+        android:id="@+id/bmEatingLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/eating_what"
+        android:textColor="@color/blue_primary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/bmLastMealEvent"
+        app:layout_constraintTop_toBottomOf="@+id/bmStartTimePicker" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/bmRecipeChooser"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginTop="10dp"
+        android:background="@color/yellow_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="@+id/bmLastMealEvent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bmLastMealEvent"
+        app:layout_constraintTop_toBottomOf="@+id/bmEatingLabel" />
+
+    <TextView
+        android:id="@+id/bmChooseRecipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/choose_recipe"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bmRecipeChooser"
+        app:layout_constraintEnd_toEndOf="@+id/bmRecipeChooser"
+        app:layout_constraintStart_toStartOf="@+id/bmRecipeChooser"
+        app:layout_constraintTop_toTopOf="@+id/bmRecipeChooser" />
+
+    <ImageView
+        android:id="@+id/bmNextButton2"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/bmChooseRecipe"
+        app:layout_constraintEnd_toEndOf="@+id/bmRecipeChooser"
+        app:layout_constraintTop_toTopOf="@+id/bmChooseRecipe"
+        app:srcCompat="@drawable/next" />
+
+    <TextView
+        android:id="@+id/bmNoteLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/note"
+        android:textColor="@color/blue_primary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/bmLastMealEvent"
+        app:layout_constraintTop_toBottomOf="@+id/bmRecipeChooser" />
+
+    <EditText
+        android:id="@+id/bmNoteTxt"
+        android:layout_width="0dp"
+        android:layout_height="120sp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle_grey_border"
+        android:ems="10"
+        android:fontFamily="@font/comfortaa_medium"
+        android:hint="@string/enterHint"
+        android:inputType="textPersonName"
+        android:padding="8sp"
+        android:singleLine="false"
+        android:text="@string/note_content"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/bmLastMealEvent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/bmLastMealEvent"
+        app:layout_constraintTop_toBottomOf="@+id/bmNoteLabel" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bmSaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/blue_primary"
+        android:fontFamily="@font/comfortaa_semibold"
+        android:padding="5sp"
+        android:text="@string/save"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/bmLastMealEvent"
+        app:layout_constraintStart_toStartOf="@+id/bmLastMealEvent"
+        app:layout_constraintTop_toBottomOf="@+id/bmNoteTxt" />
+</androidx.constraintlayout.widget.ConstraintLayout>

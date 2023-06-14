@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/grey_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:fontFamily="@font/comfortaa_semibold"
+        android:text="@string/setting"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:icon="@drawable/baseline_menu_24"
+        app:iconTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/topBar"
+        app:layout_constraintStart_toStartOf="@+id/topBar"
+        app:layout_constraintTop_toTopOf="@+id/topBar" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/babyInfo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/blue_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/categoryTitle"
+        app:layout_constraintEnd_toEndOf="@+id/categoryTitle"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBar" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/timer"
+        android:layout_width="200sp"
+        android:layout_height="210sp"
+        android:background="@drawable/rectangle_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="@+id/babyInfo"
+        app:layout_constraintEnd_toEndOf="@+id/babyInfo"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/babyInfo"
+        app:layout_constraintTop_toTopOf="@+id/babyInfo" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/categoryTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/blue_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/babyInfo" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/feed"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:fontFamily="@font/comfortaa_bold"
+        app:layout_constraintBottom_toBottomOf="@+id/categoryTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/categoryTitle"
+        app:layout_constraintTop_toTopOf="@+id/categoryTitle" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/optionsContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/grey_primary"
+        app:layout_constraintBottom_toTopOf="@+id/materialToolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categoryTitle">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+    </androidx.viewpager.widget.ViewPager>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="90sp"
+        android:layout_marginBottom="1dp"
+        android:background="@color/blue_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/feedingIcon"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:contentDescription="@string/feed"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintEnd_toStartOf="@+id/nappyIcon"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar"
+        app:srcCompat="@drawable/eating" />
+
+    <ImageView
+        android:id="@+id/nappyIcon"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:contentDescription="@string/nappy"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintEnd_toStartOf="@+id/sleepIcon"
+        app:layout_constraintStart_toEndOf="@+id/feedingIcon"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar"
+        app:srcCompat="@drawable/diaper" />
+
+    <ImageView
+        android:id="@+id/sleepIcon"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:contentDescription="@string/sleep"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintEnd_toStartOf="@+id/activityIcon"
+        app:layout_constraintStart_toEndOf="@+id/nappyIcon"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar"
+        app:srcCompat="@drawable/sleep" />
+
+    <ImageView
+        android:id="@+id/activityIcon"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:contentDescription="@string/activity"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/sleepIcon"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar"
+        app:layout_constraintVertical_bias="0.523"
+        app:srcCompat="@drawable/teddy" />
+
+    <ImageView
+        android:id="@+id/babyPhotoImg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/baby_info"
+        app:layout_constraintBottom_toBottomOf="@+id/babyInfo"
+        app:layout_constraintEnd_toStartOf="@+id/timer"
+        app:layout_constraintStart_toStartOf="@+id/babyInfo"
+        app:layout_constraintTop_toTopOf="@+id/babyInfo"
+        app:srcCompat="@drawable/baby_avatar" />
+
+    <TextView
+        android:id="@+id/babyNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/name_example"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/topBar"
+        app:layout_constraintTop_toTopOf="@+id/topBar" />
+
+    <TextView
+        android:id="@+id/babyDOBLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_medium"
+        android:text="@string/date_example"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/babyNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/babyNameLabel" />
+
+    <ImageView
+        android:id="@+id/buttonEditInfo"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:contentDescription="@string/edit"
+        android:padding="5sp"
+        app:layout_constraintBottom_toBottomOf="@+id/babyInfo"
+        app:layout_constraintEnd_toStartOf="@+id/timer"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/babyPhotoImg"
+        app:layout_constraintTop_toTopOf="@+id/babyInfo"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/edit" />
+
+    <TextView
+        android:id="@+id/actionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/free"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/generalTimer"
+        app:layout_constraintEnd_toEndOf="@+id/timer"
+        app:layout_constraintStart_toStartOf="@+id/timer"
+        app:layout_constraintTop_toTopOf="@+id/timer" />
+
+    <TextView
+        android:id="@+id/generalTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/comfortaa_medium"
+        android:text="@string/timer_example"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/timer"
+        app:layout_constraintTop_toBottomOf="@+id/actionLabel"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEditDuration"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonEditDuration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/grey_primary"
+        android:fontFamily="@font/comfortaa_bold"
+        android:padding="8sp"
+        android:text="@string/end"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/timer"
+        app:layout_constraintEnd_toEndOf="@+id/actionLabel"
+        app:layout_constraintStart_toStartOf="@+id/actionLabel"
+        app:layout_constraintTop_toBottomOf="@+id/generalTimer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNappy">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/nTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@color/grey_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_semibold"
+        android:text="@string/adding_nappy"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nTopBar"
+        app:layout_constraintEnd_toEndOf="@+id/nTopBar"
+        app:layout_constraintStart_toStartOf="@+id/nTopBar"
+        app:layout_constraintTop_toTopOf="@+id/nTopBar" />
+
+    <ImageButton
+        android:id="@+id/nBackButton"
+        style="@android:style/Widget.Material.Light.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/nTopBar"
+        app:layout_constraintStart_toStartOf="@+id/nTopBar"
+        app:layout_constraintTop_toTopOf="@+id/nTopBar"
+        app:srcCompat="@drawable/go_back" />
+
+    <TextView
+        android:id="@+id/nStartLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/nappy_choose_time"
+        android:textColor="@color/blue_primary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nTopBar" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/nStartTimePicker"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/rectangle_grey_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nStartLabel" />
+
+    <TextView
+        android:id="@+id/nTimePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/time_stamp"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/nStartTimePicker"
+        app:layout_constraintEnd_toEndOf="@+id/nStartTimePicker"
+        app:layout_constraintStart_toStartOf="@+id/nStartTimePicker"
+        app:layout_constraintTop_toTopOf="@+id/nStartTimePicker" />
+
+    <ImageView
+        android:id="@+id/nNextButton"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/nStartTimePicker"
+        app:layout_constraintEnd_toEndOf="@+id/nStartTimePicker"
+        app:layout_constraintTop_toTopOf="@+id/nStartTimePicker"
+        app:srcCompat="@drawable/next" />
+
+    <TextView
+        android:id="@+id/nConditionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/nappy_choose_type"
+        android:textColor="@color/blue_primary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/nStartTimePicker"
+        app:layout_constraintTop_toBottomOf="@+id/nStartTimePicker" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/nPee"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/rectangle_grey_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toStartOf="@+id/nPoo"
+        app:layout_constraintStart_toStartOf="@+id/nStartTimePicker"
+        app:layout_constraintTop_toBottomOf="@+id/nConditionLabel" />
+
+    <ImageView
+        android:id="@+id/nPeeIcon"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/nPee"
+        app:layout_constraintStart_toStartOf="@+id/nPee"
+        app:layout_constraintEnd_toStartOf="@+id/nPeeLabel"
+        app:layout_constraintTop_toTopOf="@+id/nPee"
+        app:srcCompat="@drawable/pee" />
+
+    <TextView
+        android:id="@+id/nPeeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/pee"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nPee"
+        app:layout_constraintEnd_toEndOf="@+id/nPee"
+        app:layout_constraintStart_toEndOf="@+id/nPeeIcon"
+        app:layout_constraintTop_toTopOf="@+id/nPee" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/nPoo"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/rectangle_grey_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toStartOf="@+id/nBoth"
+        app:layout_constraintStart_toEndOf="@+id/nPee"
+        app:layout_constraintTop_toTopOf="@+id/nPee" />
+
+    <ImageView
+        android:id="@+id/nPooIcon"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/nPoo"
+        app:layout_constraintStart_toStartOf="@+id/nPoo"
+        app:layout_constraintEnd_toStartOf="@+id/nPooLabel"
+        app:layout_constraintTop_toTopOf="@+id/nPoo"
+        app:srcCompat="@drawable/poo" />
+
+    <TextView
+        android:id="@+id/nPooLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/poop"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nPoo"
+        app:layout_constraintEnd_toEndOf="@+id/nPoo"
+        app:layout_constraintStart_toEndOf="@+id/nPooIcon"
+        app:layout_constraintTop_toTopOf="@+id/nPoo" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/nBoth"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/rectangle_grey_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="@+id/nStartTimePicker"
+        app:layout_constraintStart_toEndOf="@+id/nPoo"
+        app:layout_constraintTop_toTopOf="@+id/nPee" />
+
+    <ImageView
+        android:id="@+id/nBothIcon"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/nBoth"
+        app:layout_constraintStart_toStartOf="@+id/nBoth"
+        app:layout_constraintEnd_toStartOf="@+id/nBothLabel"
+        app:layout_constraintTop_toTopOf="@+id/nBoth"
+        app:srcCompat="@drawable/both" />
+
+    <TextView
+        android:id="@+id/nBothLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/mixed"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nBoth"
+        app:layout_constraintEnd_toEndOf="@+id/nBoth"
+        app:layout_constraintStart_toEndOf="@+id/nBothIcon"
+        app:layout_constraintTop_toTopOf="@+id/nBoth" />
+
+    <TextView
+        android:id="@+id/nImageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/nappy_record_image"
+        android:textColor="@color/blue_primary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/nStartTimePicker"
+        app:layout_constraintTop_toBottomOf="@+id/nPoo" />
+
+    <ImageView
+        android:id="@+id/nImage"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/upload"
+        app:layout_constraintStart_toStartOf="@+id/nStartTimePicker"
+        app:layout_constraintTop_toBottomOf="@+id/nImageLabel"
+        app:srcCompat="@drawable/poop" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/nUploadButton"
+        android:layout_width="145sp"
+        android:layout_height="55sp"
+        android:background="@drawable/rectangle_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="@+id/nStartTimePicker"
+        app:layout_constraintTop_toTopOf="@+id/nImage" />
+
+    <ImageView
+        android:id="@+id/nUploadIcon"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/nUploadButton"
+        app:layout_constraintStart_toStartOf="@+id/nUploadButton"
+        app:layout_constraintEnd_toStartOf="@+id/nUploadLabel"
+        app:layout_constraintTop_toTopOf="@+id/nUploadButton"
+        app:srcCompat="@drawable/upload" />
+
+    <TextView
+        android:id="@+id/nUploadLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/nappy_upload"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nUploadButton"
+        app:layout_constraintEnd_toEndOf="@+id/nUploadButton"
+        app:layout_constraintStart_toEndOf="@+id/nUploadIcon"
+        app:layout_constraintTop_toTopOf="@+id/nUploadButton" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/nRemoveButton"
+        android:layout_width="145sp"
+        android:layout_height="55sp"
+        android:background="@drawable/rectangle_red_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="@+id/nImage"
+        app:layout_constraintEnd_toEndOf="@+id/nStartTimePicker"
+        app:layout_constraintTop_toBottomOf="@+id/nUploadButton" />
+
+    <ImageView
+        android:id="@+id/nRemoveIcon"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/nRemoveButton"
+        app:layout_constraintStart_toStartOf="@+id/nRemoveButton"
+        app:layout_constraintTop_toTopOf="@+id/nRemoveButton"
+        app:layout_constraintEnd_toStartOf="@+id/nRemoveLabel"
+        app:srcCompat="@drawable/remove" />
+
+    <TextView
+        android:id="@+id/nRemoveLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/nappy_remove"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nRemoveButton"
+        app:layout_constraintEnd_toEndOf="@+id/nRemoveButton"
+        app:layout_constraintStart_toEndOf="@+id/nRemoveIcon"
+        app:layout_constraintTop_toTopOf="@+id/nRemoveButton" />
+
+    <TextView
+        android:id="@+id/nNoteLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/note"
+        android:textColor="@color/blue_primary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/nStartTimePicker"
+        app:layout_constraintTop_toBottomOf="@+id/nImage" />
+
+    <EditText
+        android:id="@+id/nNoteTxt"
+        android:layout_width="0dp"
+        android:layout_height="120sp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle_grey_border"
+        android:ems="10"
+        android:fontFamily="@font/comfortaa_medium"
+        android:hint="@string/enterNote"
+        android:inputType="textPersonName"
+        android:padding="8sp"
+        android:singleLine="false"
+        android:text="@string/note_content"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/nStartTimePicker"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/nStartTimePicker"
+        app:layout_constraintTop_toBottomOf="@+id/nNoteLabel" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nSaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/blue_primary"
+        android:fontFamily="@font/comfortaa_semibold"
+        android:padding="5sp"
+        android:text="@string/save"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/nNoteTxt"
+        app:layout_constraintEnd_toStartOf="@+id/nClearButton"
+        app:layout_constraintTop_toBottomOf="@+id/nNoteTxt" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nClearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/red_primary"
+        android:fontFamily="@font/comfortaa_semibold"
+        android:padding="5sp"
+        android:text="@string/clear_record"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/nStartTimePicker"
+        app:layout_constraintStart_toEndOf="@+id/nSaveButton"
+        app:layout_constraintTop_toBottomOf="@+id/nNoteTxt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

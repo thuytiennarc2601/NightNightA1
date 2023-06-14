@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/uploadText"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BabyProfile">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topBar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@color/grey_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/activityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/comfortaa_semibold"
+        android:text="@string/baby_info"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/topBar2"
+        app:layout_constraintEnd_toEndOf="@+id/topBar2"
+        app:layout_constraintStart_toStartOf="@+id/topBar2"
+        app:layout_constraintTop_toTopOf="@+id/topBar2" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/babyInfoContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/grey_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBar2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/babyAvatar"
+        android:layout_width="250sp"
+        android:layout_height="250sp"
+        android:layout_marginTop="15dp"
+        android:contentDescription="@string/baby_info"
+        android:src="@drawable/baby_avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/babyInfoContainer"
+        app:layout_constraintTop_toTopOf="@+id/babyInfoContainer" />
+
+    <ImageButton
+        android:id="@+id/buttonUpload"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_primary"
+        android:contentDescription="@string/upload"
+        android:padding="1sp"
+        android:src="@drawable/upload"
+        app:layout_constraintEnd_toEndOf="@+id/babyAvatar"
+        app:layout_constraintStart_toStartOf="@+id/babyAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/babyAvatar" />
+
+    <TextView
+        android:id="@+id/nameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/enter_name"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/babyInfoContainer"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/babyInfoContainer"
+        app:layout_constraintTop_toBottomOf="@+id/buttonUpload" />
+
+    <TextView
+        android:id="@+id/dobLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="200dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/dob"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/babyInfoContainer"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/girlIcon" />
+
+    <TextView
+        android:id="@+id/genderLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="250dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/gender"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/babyInfoContainer"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/babyNameField" />
+
+    <EditText
+        android:id="@+id/babyNameField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="70dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:fontFamily="@font/comfortaa_medium"
+        android:hint="@string/enterHint"
+        android:inputType="textPersonName"
+        android:padding="8sp"
+        android:singleLine="true"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/babyInfoContainer"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/nameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/nameLabel" />
+
+    <ImageView
+        android:id="@+id/girlIcon"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/girl_icon"
+        android:src="@drawable/girl"
+        app:layout_constraintStart_toEndOf="@+id/genderLabel"
+        app:layout_constraintTop_toBottomOf="@+id/babyNameField" />
+
+    <ImageView
+        android:id="@+id/boyIcon"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle_white_border"
+        android:contentDescription="@string/boy_icon"
+        android:padding="5sp"
+        android:src="@drawable/boy"
+        app:layout_constraintStart_toEndOf="@+id/girlIcon"
+        app:layout_constraintTop_toBottomOf="@+id/babyNameField" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/dateContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="@+id/babyNameField"
+        app:layout_constraintStart_toStartOf="@+id/babyNameField"
+        app:layout_constraintTop_toBottomOf="@+id/dobLabel" />
+
+    <TextView
+        android:id="@+id/dob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date_example"
+        android:fontFamily="@font/comfortaa_bold"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/dateContainer"
+        app:layout_constraintEnd_toEndOf="@+id/dateContainer"
+        app:layout_constraintStart_toStartOf="@+id/dateContainer"
+        app:layout_constraintTop_toTopOf="@+id/dateContainer" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saveBabyInfoBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/blue_primary"
+        android:fontFamily="@font/comfortaa_semibold"
+        android:padding="5sp"
+        android:text="@string/save"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/dateContainer"
+        app:layout_constraintStart_toStartOf="@+id/dateContainer"
+        app:layout_constraintTop_toBottomOf="@+id/dateContainer" />
+
+    <ImageView
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/dateContainer"
+        app:layout_constraintEnd_toEndOf="@+id/dateContainer"
+        app:layout_constraintTop_toTopOf="@+id/dateContainer"
+        app:srcCompat="@drawable/baseline_keyboard_arrow_right_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

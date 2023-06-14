@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nappies"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/nappyContainer"
+        android:layout_width="0dp"
+        android:layout_height="120sp"
+        android:background="@drawable/rectangle_dard_blue_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/nappyPhoto"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/nappy_record_image"
+        app:layout_constraintBottom_toBottomOf="@+id/nappyContainer"
+        app:layout_constraintStart_toStartOf="@+id/nappyContainer"
+        app:layout_constraintTop_toTopOf="@+id/nappyContainer"
+        app:srcCompat="@drawable/poop" />
+
+    <TextView
+        android:id="@+id/nappyTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/time_stamp"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/nappyPhoto"
+        app:layout_constraintTop_toTopOf="@+id/nappyContainer" />
+
+    <ImageView
+        android:id="@+id/nappyTypeIcon"
+        android:layout_width="25sp"
+        android:layout_height="25sp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="2dp"
+        android:contentDescription="@string/nappy_record_image"
+        app:layout_constraintBottom_toBottomOf="@+id/nappyTime"
+        app:layout_constraintStart_toEndOf="@+id/nappyTime"
+        app:layout_constraintTop_toTopOf="@+id/nappyTime"
+        app:srcCompat="@drawable/pee" />
+
+    <TextView
+        android:id="@+id/nappyNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/comfortaa_regular"
+        android:text="@string/name_example"
+        android:textAlignment="textStart"
+        android:textColor="@color/grey_secondary"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/topBar"
+        app:layout_constraintStart_toStartOf="@+id/nappyTime"
+        app:layout_constraintTop_toBottomOf="@+id/nappyTime" />
+
+    <ImageView
+        android:id="@+id/nappyDeleteButton"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/nappy_record_image"
+        app:layout_constraintBottom_toBottomOf="@+id/nappyTime"
+        app:layout_constraintEnd_toEndOf="@+id/nappyContainer"
+        app:layout_constraintTop_toTopOf="@+id/nappyTime"
+        app:srcCompat="@drawable/remove" />
+
+    <ImageView
+        android:id="@+id/nappyEditButton"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/nappy_record_image"
+        app:layout_constraintBottom_toBottomOf="@+id/nappyTime"
+        app:layout_constraintEnd_toStartOf="@+id/nappyDeleteButton"
+        app:layout_constraintTop_toTopOf="@+id/nappyTime"
+        app:srcCompat="@drawable/edit" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/separator"
+        android:layout_width="0dp"
+        android:layout_height="5sp"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nappyContainer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

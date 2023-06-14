@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "215361890488",
+    "project_id": "night-night-898a1",
+    "storage_bucket": "night-night-898a1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215361890488:android:e09258cefa1270d6b02c4d",
+        "android_client_info": {
+          "package_name": "au.edu.utas.username.nightnight"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "215361890488-aiaffe5ii3m622tlqqugfecbcr7d5epn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyc6RFO2SbHmOLCzEKzbQAMsx1E458yBY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "215361890488-aiaffe5ii3m622tlqqugfecbcr7d5epn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

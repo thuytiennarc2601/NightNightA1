@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Nappy">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/nappy_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/description2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/comfortaa_medium"
+            android:text="@string/choose_event"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/description3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="210dp"
+            android:fontFamily="@font/comfortaa_medium"
+            android:text="@string/choose_options"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addNappyBar" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/addNappyBar"
+            android:layout_width="300sp"
+            android:layout_height="60sp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rectangle_round_border"
+            android:clickable="false"
+            android:focusable="auto"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description2" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/nappyListBar"
+            android:layout_width="300sp"
+            android:layout_height="60sp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rectangle_round_border"
+            android:clickable="false"
+            android:focusable="auto"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description3" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/nappySummaryBar"
+            android:layout_width="300sp"
+            android:layout_height="60sp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rectangle_round_border"
+            android:clickable="false"
+            android:focusable="auto"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nappyListBar" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/nappyChartBar"
+            android:layout_width="300sp"
+            android:layout_height="60sp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rectangle_round_border"
+            android:clickable="false"
+            android:focusable="auto"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nappySummaryBar" />
+
+        <TextView
+            android:id="@+id/addNappyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="auto"
+            android:fontFamily="@font/comfortaa_medium"
+            android:text="@string/add_nappy"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/addNappyBar"
+            app:layout_constraintEnd_toEndOf="@+id/addNappyBar"
+            app:layout_constraintStart_toStartOf="@+id/addNappyBar"
+            app:layout_constraintTop_toTopOf="@+id/addNappyBar" />
+
+        <TextView
+            android:id="@+id/nappyListText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="auto"
+            android:fontFamily="@font/comfortaa_medium"
+            android:text="@string/nappy_list"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/nappyListBar"
+            app:layout_constraintEnd_toEndOf="@+id/nappyListBar"
+            app:layout_constraintStart_toStartOf="@+id/nappyListBar"
+            app:layout_constraintTop_toTopOf="@+id/nappyListBar" />
+
+        <TextView
+            android:id="@+id/nappySummaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="auto"
+            android:fontFamily="@font/comfortaa_medium"
+            android:text="@string/nappy_summary"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/nappySummaryBar"
+            app:layout_constraintEnd_toEndOf="@+id/nappySummaryBar"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="@+id/nappySummaryBar"
+            app:layout_constraintTop_toTopOf="@+id/nappySummaryBar" />
+
+        <TextView
+            android:id="@+id/nappyChartText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="auto"
+            android:fontFamily="@font/comfortaa_medium"
+            android:text="@string/chart"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/nappyChartBar"
+            app:layout_constraintEnd_toEndOf="@+id/nappyChartBar"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="@+id/nappyChartBar"
+            app:layout_constraintTop_toTopOf="@+id/nappyChartBar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

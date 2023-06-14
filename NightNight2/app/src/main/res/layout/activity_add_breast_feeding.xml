@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddBreastFeeding">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/brfSaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/blue_primary"
+        android:fontFamily="@font/comfortaa_semibold"
+        android:padding="5sp"
+        android:text="@string/save"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/brfClearButton"
+        app:layout_constraintStart_toStartOf="@+id/brfLastEventContainer"
+        app:layout_constraintTop_toBottomOf="@+id/brfNoteTxt" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/brfClearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/red_primary"
+        android:fontFamily="@font/comfortaa_semibold"
+        android:padding="5sp"
+        android:text="@string/clear_record"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/brfLastEventContainer"
+        app:layout_constraintStart_toEndOf="@+id/brfSaveButton"
+        app:layout_constraintTop_toBottomOf="@+id/brfNoteTxt" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/bfTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@color/grey_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/brfLastEventContainer"
+        android:layout_width="match_parent"
+        android:layout_height="110sp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/grey_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bfTopBar" />
+
+    <TextView
+        android:id="@+id/brfLastEventLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/brf_last_event_time"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/brfLastEventContainer"
+        app:layout_constraintTop_toTopOf="@+id/brfLastEventContainer" />
+
+    <TextView
+        android:id="@+id/brfLastStartTime"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/example"
+        android:textColor="@color/red_secondary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/brfLastEventLabel"
+        app:layout_constraintStart_toEndOf="@+id/brfLastEventLabel"
+        app:layout_constraintTop_toTopOf="@+id/brfLastEventLabel" />
+
+    <TextView
+        android:id="@+id/brfLastFeedingSide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/example"
+        android:textColor="@color/red_secondary"
+        android:textSize="14sp"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="@+id/brfLastSide"
+        app:layout_constraintStart_toEndOf="@+id/brfLastSide"
+        app:layout_constraintTop_toTopOf="@+id/brfLastSide" />
+
+    <TextView
+        android:id="@+id/brfLastSide"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/brf_last_side"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/brfLastEventLabel"
+        app:layout_constraintTop_toBottomOf="@+id/brfLastEventLabel" />
+
+    <TextView
+        android:id="@+id/brfStartSide"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/brf_start_side"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/brfLastEventLabel"
+        app:layout_constraintTop_toBottomOf="@+id/brfLastSide" />
+
+    <TextView
+        android:id="@+id/brfEndFeedingSide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/example"
+        android:textAllCaps="true"
+        android:textColor="@color/red_secondary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/brfStartSide"
+        app:layout_constraintStart_toEndOf="@+id/brfStartSide"
+        app:layout_constraintTop_toTopOf="@+id/brfStartSide" />
+
+    <TextView
+        android:id="@+id/brfDurationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/duration"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/brfLastEventContainer"
+        app:layout_constraintStart_toStartOf="@+id/brfLastEventLabel"
+        app:layout_constraintTop_toBottomOf="@+id/brfStartSide" />
+
+    <TextView
+        android:id="@+id/brfLastDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/example"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/brfDurationLabel"
+        app:layout_constraintStart_toEndOf="@+id/brfDurationLabel"
+        app:layout_constraintTop_toTopOf="@+id/brfDurationLabel" />
+
+    <ImageButton
+        android:id="@+id/bfBackButton"
+        style="@android:style/Widget.Material.Light.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/bfTopBar"
+        app:layout_constraintStart_toStartOf="@+id/bfTopBar"
+        app:layout_constraintTop_toTopOf="@+id/bfTopBar"
+        app:srcCompat="@drawable/go_back" />
+
+    <TextView
+        android:id="@+id/bfTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_semibold"
+        android:text="@string/brf_add"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bfTopBar"
+        app:layout_constraintEnd_toEndOf="@+id/bfTopBar"
+        app:layout_constraintStart_toStartOf="@+id/bfTopBar"
+        app:layout_constraintTop_toTopOf="@+id/bfTopBar" />
+
+    <TextView
+        android:id="@+id/brfStartLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/f_start_at"
+        android:textColor="@color/blue_primary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/brfLastEventContainer"
+        app:layout_constraintTop_toBottomOf="@+id/brfLastEventContainer" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/startTimePicker"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle_grey_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="@+id/brfLastEventContainer"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/brfLastEventContainer"
+        app:layout_constraintTop_toBottomOf="@+id/brfStartLabel" />
+
+    <TextView
+        android:id="@+id/brfTimePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/time_stamp"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/startTimePicker"
+        app:layout_constraintEnd_toEndOf="@+id/startTimePicker"
+        app:layout_constraintStart_toStartOf="@+id/startTimePicker"
+        app:layout_constraintTop_toTopOf="@+id/startTimePicker" />
+
+    <ImageView
+        android:id="@+id/brfNextButton"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/startTimePicker"
+        app:layout_constraintEnd_toEndOf="@+id/startTimePicker"
+        app:layout_constraintTop_toTopOf="@+id/startTimePicker"
+        app:srcCompat="@drawable/next" />
+
+    <TextView
+        android:id="@+id/brfStartRecordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/brf_choose_side"
+        android:textColor="@color/blue_primary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/brfStartLabel"
+        app:layout_constraintTop_toBottomOf="@+id/startTimePicker" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/timerLeft"
+        android:layout_width="0dp"
+        android:layout_height="110sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/rectangle_light_grey_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toStartOf="@+id/timerRight"
+        app:layout_constraintStart_toStartOf="@+id/brfLastEventContainer"
+        app:layout_constraintTop_toBottomOf="@+id/brfStartRecordLabel" />
+
+    <TextView
+        android:id="@+id/brfLeftSideLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/left_side"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/brfLeftPlayIcon"
+        app:layout_constraintEnd_toEndOf="@+id/timerLeft"
+        app:layout_constraintStart_toEndOf="@+id/brfLeftPlayIcon"
+        app:layout_constraintTop_toTopOf="@+id/brfLeftPlayIcon" />
+
+    <ImageView
+        android:id="@+id/brfLeftPlayIcon"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:contentDescription="@string/back"
+        app:layout_constraintEnd_toStartOf="@+id/brfLeftSideLabel"
+        app:layout_constraintStart_toStartOf="@+id/timerLeft"
+        app:layout_constraintTop_toTopOf="@+id/timerLeft"
+        app:layout_constraintBottom_toTopOf="@+id/brfLeftTimer"
+        app:srcCompat="@drawable/play" />
+
+    <EditText
+        android:id="@+id/brfLeftTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:fontFamily="@font/comfortaa_bold"
+        android:hint="@string/timer_example"
+        android:inputType="textPersonName"
+        android:maxLength="8"
+        android:text="@string/timer_example"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/timerLeft"
+        app:layout_constraintEnd_toEndOf="@+id/timerLeft"
+        app:layout_constraintStart_toStartOf="@+id/timerLeft"
+        app:layout_constraintTop_toBottomOf="@+id/brfLeftPlayIcon" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/timerRight"
+        android:layout_width="0dp"
+        android:layout_height="110sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle_light_grey_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="@+id/brfLastEventContainer"
+        app:layout_constraintStart_toEndOf="@+id/timerLeft"
+        app:layout_constraintTop_toBottomOf="@+id/brfStartRecordLabel" />
+
+    <TextView
+        android:id="@+id/brfRightSideLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/right_side"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/timerRight"
+        app:layout_constraintStart_toEndOf="@+id/brfRightPlayIcon"
+        app:layout_constraintTop_toTopOf="@+id/timerRight"
+        app:layout_constraintBottom_toTopOf="@+id/brfRightTimer"/>
+
+    <ImageView
+        android:id="@+id/brfRightPlayIcon"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/brfRightSideLabel"
+        app:layout_constraintEnd_toStartOf="@+id/brfRightSideLabel"
+        app:layout_constraintStart_toStartOf="@+id/timerRight"
+        app:layout_constraintTop_toTopOf="@+id/brfRightSideLabel"
+        app:srcCompat="@drawable/play" />
+
+    <EditText
+        android:id="@+id/brfRightTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:fontFamily="@font/comfortaa_bold"
+        android:hint="@string/timer_example"
+        android:inputType="textPersonName"
+        android:maxLength="8"
+        android:text="@string/timer_example"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/timerRight"
+        app:layout_constraintEnd_toEndOf="@+id/timerRight"
+        app:layout_constraintStart_toStartOf="@+id/timerRight"
+        app:layout_constraintTop_toBottomOf="@+id/brfRightSideLabel" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/brfTotalDuration"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginTop="10dp"
+        android:background="@color/blue_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="@+id/timerLeft"
+        app:layout_constraintStart_toStartOf="@+id/timerLeft"
+        app:layout_constraintTop_toBottomOf="@+id/timerLeft" />
+
+    <TextView
+        android:id="@+id/brfTotalDurationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/total_duration"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/brfTotalDuration"
+        app:layout_constraintTop_toTopOf="@+id/brfTotalDuration" />
+
+    <TextView
+        android:id="@+id/brfTotalDurationValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/time"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/brfTotalDuration"
+        app:layout_constraintEnd_toEndOf="@+id/brfTotalDuration"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/brfTotalDurationLabel"
+        app:layout_constraintTop_toTopOf="@+id/brfTotalDuration"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/brfRestartButton"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginTop="10dp"
+        android:background="@color/blue_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="@+id/timerRight"
+        app:layout_constraintStart_toStartOf="@+id/timerRight"
+        app:layout_constraintTop_toBottomOf="@+id/timerRight" />
+
+    <ImageView
+        android:id="@+id/brfRestartIcon"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_marginStart="10dp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/brfRestartLabel"
+        app:layout_constraintStart_toStartOf="@+id/brfRestartButton"
+        app:layout_constraintTop_toTopOf="@+id/brfRestartLabel"
+        app:srcCompat="@drawable/restart" />
+
+    <TextView
+        android:id="@+id/brfRestartLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/restart"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/brfRestartButton"
+        app:layout_constraintEnd_toEndOf="@+id/brfRestartButton"
+        app:layout_constraintStart_toEndOf="@+id/brfRestartIcon"
+        app:layout_constraintTop_toTopOf="@+id/brfRestartButton" />
+
+    <TextView
+        android:id="@+id/brfNoteLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/note"
+        android:textColor="@color/blue_primary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/brfTotalDuration"
+        app:layout_constraintTop_toBottomOf="@+id/brfTotalDuration" />
+
+    <EditText
+        android:id="@+id/brfNoteTxt"
+        android:layout_width="0dp"
+        android:layout_height="120sp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rectangle_grey_border"
+        android:ems="10"
+        android:fontFamily="@font/comfortaa_medium"
+        android:hint="@string/enterNote"
+        android:inputType="textPersonName"
+        android:padding="8sp"
+        android:singleLine="false"
+        android:text="@string/note_content"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/startTimePicker"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/brfTotalDuration"
+        app:layout_constraintTop_toBottomOf="@+id/brfNoteLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

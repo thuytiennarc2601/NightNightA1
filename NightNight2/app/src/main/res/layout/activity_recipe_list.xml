@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecipeList">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/rTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@color/grey_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_semibold"
+        android:text="@string/recipes"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rTopBar"
+        app:layout_constraintEnd_toEndOf="@+id/rTopBar"
+        app:layout_constraintStart_toStartOf="@+id/rTopBar"
+        app:layout_constraintTop_toTopOf="@+id/rTopBar" />
+
+    <ImageButton
+        android:id="@+id/rBackButton"
+        style="@android:style/Widget.Material.Light.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/rTopBar"
+        app:layout_constraintStart_toStartOf="@+id/rTopBar"
+        app:layout_constraintTop_toTopOf="@+id/rTopBar"
+        app:srcCompat="@drawable/go_back" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/rCateBar"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="@+id/rSearchBar"
+        app:layout_constraintStart_toStartOf="@+id/rSearchBar"
+        app:layout_constraintTop_toBottomOf="@+id/rTopBar" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/rAddButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/blue_primary"
+        android:fontFamily="@font/comfortaa_semibold"
+        android:padding="5sp"
+        android:text="@string/add_recipe"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/rSearchBar"
+        app:layout_constraintTop_toBottomOf="@+id/rSearchBar" />
+
+    <EditText
+        android:id="@+id/rSearchBar"
+        android:layout_width="0dp"
+        android:layout_height="40sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rectangle_grey_border"
+        android:ems="10"
+        android:fontFamily="@font/comfortaa_medium"
+        android:hint="@string/search_recipe"
+        android:inputType="textPersonName"
+        android:padding="8sp"
+        android:singleLine="true"
+        android:textAlignment="textEnd"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/recipeListContainter"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/recipeListContainter"
+        app:layout_constraintTop_toBottomOf="@+id/rCateBar" />
+
+    <ImageView
+        android:id="@+id/brfNextButton2"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_marginStart="10dp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/rSearchBar"
+        app:layout_constraintStart_toStartOf="@+id/rSearchBar"
+        app:layout_constraintTop_toTopOf="@+id/rSearchBar"
+        app:srcCompat="@drawable/search" />
+
+    <ScrollView
+        android:id="@+id/recipeListContainter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rAddButton">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recipeList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </ScrollView>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        app:layout_constraintEnd_toEndOf="@+id/rCateBar"
+        app:layout_constraintStart_toStartOf="@+id/rCateBar"
+        tools:layout_editor_absoluteY="85dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/rAllCate1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/blue_primary"
+                android:fontFamily="@font/comfortaa_semibold"
+                android:padding="5sp"
+                android:text="@string/cate1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/rAllCate2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@color/blue_primary"
+                android:fontFamily="@font/comfortaa_semibold"
+                android:padding="5sp"
+                android:text="@string/cate2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/rAllCate3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@color/blue_primary"
+                android:fontFamily="@font/comfortaa_semibold"
+                android:padding="5sp"
+                android:text="@string/cate3"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/rAllCate4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@color/blue_primary"
+                android:fontFamily="@font/comfortaa_semibold"
+                android:padding="5sp"
+                android:text="@string/cate4"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.NightNight"
+        tools:targetApi="31">
+        <activity
+            android:name=".ViewSummaries"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ViewLists"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddEditRecipe"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RecipeList"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddBabymeal"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddSleep"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddNappy"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddBottleFeeding"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddBreastFeeding"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BabyProfile"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

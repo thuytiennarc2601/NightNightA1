@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Sleep">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sleep_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/comfortaa_medium"
+            android:text="@string/choose_event"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/description4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="210dp"
+            android:fontFamily="@font/comfortaa_medium"
+            android:text="@string/choose_options"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addSleepBar" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/addSleepBar"
+            android:layout_width="300sp"
+            android:layout_height="60sp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rectangle_round_border"
+            android:clickable="false"
+            android:focusable="auto"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/sleepListBar"
+            android:layout_width="300sp"
+            android:layout_height="60sp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rectangle_round_border"
+            android:clickable="false"
+            android:focusable="auto"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description4" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/sleepSummaryBar"
+            android:layout_width="300sp"
+            android:layout_height="60sp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rectangle_round_border"
+            android:clickable="false"
+            android:focusable="auto"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sleepListBar" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/sleepChartBar"
+            android:layout_width="300sp"
+            android:layout_height="60sp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rectangle_round_border"
+            android:clickable="false"
+            android:focusable="auto"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sleepSummaryBar" />
+
+        <TextView
+            android:id="@+id/sleepChartText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="auto"
+            android:fontFamily="@font/comfortaa_medium"
+            android:text="@string/chart"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/sleepChartBar"
+            app:layout_constraintEnd_toEndOf="@+id/sleepChartBar"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="@+id/sleepChartBar"
+            app:layout_constraintTop_toTopOf="@+id/sleepChartBar" />
+
+        <TextView
+            android:id="@+id/sleepSummaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="auto"
+            android:fontFamily="@font/comfortaa_medium"
+            android:text="@string/sleep_summary"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/sleepSummaryBar"
+            app:layout_constraintEnd_toEndOf="@+id/sleepSummaryBar"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="@+id/sleepSummaryBar"
+            app:layout_constraintTop_toTopOf="@+id/sleepSummaryBar" />
+
+        <TextView
+            android:id="@+id/sleepListText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="auto"
+            android:fontFamily="@font/comfortaa_medium"
+            android:text="@string/sleep_list"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/sleepListBar"
+            app:layout_constraintEnd_toEndOf="@+id/sleepListBar"
+            app:layout_constraintStart_toStartOf="@+id/sleepListBar"
+            app:layout_constraintTop_toTopOf="@+id/sleepListBar" />
+
+        <TextView
+            android:id="@+id/addSleepText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="auto"
+            android:fontFamily="@font/comfortaa_medium"
+            android:text="@string/add_sleep"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/addSleepBar"
+            app:layout_constraintEnd_toEndOf="@+id/addSleepBar"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="@+id/addSleepBar"
+            app:layout_constraintTop_toTopOf="@+id/addSleepBar"
+            app:layout_constraintVertical_bias="0.428" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

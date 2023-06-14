@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddSleep">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/sTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@color/grey_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_semibold"
+        android:text="@string/add_sleep"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/sTopBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/sTopBar"
+        app:layout_constraintTop_toTopOf="@+id/sTopBar" />
+
+    <ImageButton
+        android:id="@+id/sBackButton"
+        style="@android:style/Widget.Material.Light.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/sTopBar"
+        app:layout_constraintStart_toStartOf="@+id/sTopBar"
+        app:layout_constraintTop_toTopOf="@+id/sTopBar"
+        app:srcCompat="@drawable/go_back" />
+
+    <TextView
+        android:id="@+id/sStartSleepLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/start_sleep"
+        android:textColor="@color/blue_primary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sTopBar" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/sStartTimePicker"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/rectangle_grey_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/sStartSleepLabel"
+        app:layout_constraintTop_toBottomOf="@+id/sStartSleepLabel" />
+
+    <TextView
+        android:id="@+id/sTimePickerStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/time_stamp"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/sStartTimePicker"
+        app:layout_constraintEnd_toEndOf="@+id/sStartTimePicker"
+        app:layout_constraintStart_toStartOf="@+id/sStartTimePicker"
+        app:layout_constraintTop_toTopOf="@+id/sStartTimePicker" />
+
+    <ImageView
+        android:id="@+id/sNextButton"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/sStartTimePicker"
+        app:layout_constraintEnd_toEndOf="@+id/sStartTimePicker"
+        app:layout_constraintTop_toTopOf="@+id/sStartTimePicker"
+        app:srcCompat="@drawable/next" />
+
+    <TextView
+        android:id="@+id/sEndSleepLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/start_record"
+        android:textColor="@color/blue_primary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/sStartTimePicker"
+        app:layout_constraintTop_toBottomOf="@+id/sStartTimePicker" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/sSleepTimer"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle_light_grey_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="@+id/sStartTimePicker"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/sStartTimePicker"
+        app:layout_constraintTop_toBottomOf="@+id/sEndSleepLabel" />
+
+    <EditText
+        android:id="@+id/sTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:ems="10"
+        android:fontFamily="@font/comfortaa_bold"
+        android:hint="@string/timer_example"
+        android:inputType="textPersonName"
+        android:maxLength="8"
+        android:text="@string/timer_example"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/sSleepTimer"
+        app:layout_constraintEnd_toEndOf="@+id/sSleepTimer"
+        app:layout_constraintStart_toStartOf="@+id/sSleepTimer"
+        app:layout_constraintTop_toTopOf="@+id/sSleepTimer" />
+
+    <ImageView
+        android:id="@+id/sPlayIcon"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_marginStart="10dp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/sSleepTimer"
+        app:layout_constraintEnd_toStartOf="@+id/brfLeftSideLabel"
+        app:layout_constraintStart_toStartOf="@+id/sSleepTimer"
+        app:layout_constraintTop_toTopOf="@+id/sSleepTimer"
+        app:srcCompat="@drawable/play" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/sRestartButton"
+        android:layout_width="140sp"
+        android:layout_height="45sp"
+        android:layout_marginTop="10dp"
+        android:background="@color/blue_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="@+id/sStartTimePicker"
+        app:layout_constraintTop_toBottomOf="@+id/sSleepTimer" />
+
+    <ImageView
+        android:id="@+id/sRestartIcon"
+        android:layout_width="25sp"
+        android:layout_height="25sp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/sRestartButton"
+        app:layout_constraintEnd_toStartOf="@+id/sRestartLabel"
+        app:layout_constraintStart_toStartOf="@+id/sRestartButton"
+        app:layout_constraintTop_toTopOf="@+id/sRestartButton"
+        app:srcCompat="@drawable/restart" />
+
+    <TextView
+        android:id="@+id/sRestartLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/restart"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/sRestartButton"
+        app:layout_constraintEnd_toEndOf="@+id/sRestartButton"
+        app:layout_constraintStart_toEndOf="@+id/sRestartIcon"
+        app:layout_constraintTop_toTopOf="@+id/sRestartButton" />
+
+    <TextView
+        android:id="@+id/sNoteLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/note"
+        android:textColor="@color/blue_primary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/sStartTimePicker"
+        app:layout_constraintTop_toBottomOf="@+id/sRestartButton" />
+
+    <EditText
+        android:id="@+id/sNoteTxt"
+        android:layout_width="0dp"
+        android:layout_height="120sp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle_grey_border"
+        android:ems="10"
+        android:fontFamily="@font/comfortaa_medium"
+        android:hint="@string/enterNote"
+        android:inputType="textPersonName"
+        android:padding="8sp"
+        android:singleLine="false"
+        android:text="@string/note_content"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/sStartTimePicker"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/sStartTimePicker"
+        app:layout_constraintTop_toBottomOf="@+id/sNoteLabel" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sSaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/blue_primary"
+        android:fontFamily="@font/comfortaa_semibold"
+        android:padding="5sp"
+        android:text="@string/save"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/sClearButton"
+        app:layout_constraintStart_toStartOf="@+id/sStartTimePicker"
+        app:layout_constraintTop_toBottomOf="@+id/sNoteTxt" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sClearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/red_primary"
+        android:fontFamily="@font/comfortaa_semibold"
+        android:padding="5sp"
+        android:text="@string/clear_record"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/sStartTimePicker"
+        app:layout_constraintStart_toEndOf="@+id/sSaveButton"
+        app:layout_constraintTop_toBottomOf="@+id/sNoteTxt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

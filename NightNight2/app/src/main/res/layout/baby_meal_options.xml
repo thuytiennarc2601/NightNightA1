@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/bmOptionsContainer"
+        android:layout_width="0dp"
+        android:layout_height="250sp"
+        android:background="@drawable/rectangle_grey_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/bmAddOption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/rectangle_round_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="@+id/bmOptionsContainer"
+        app:layout_constraintStart_toStartOf="@+id/bmOptionsContainer"
+        app:layout_constraintTop_toTopOf="@+id/bmOptionsContainer" />
+
+    <TextView
+        android:id="@+id/bmAddLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/add_meal"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bmAddOption"
+        app:layout_constraintEnd_toEndOf="@+id/bmAddOption"
+        app:layout_constraintStart_toStartOf="@+id/bmAddOption"
+        app:layout_constraintTop_toTopOf="@+id/bmAddOption" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/bmRecipeOption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/rectangle_round_border"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="@+id/bmOptionsContainer"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bmOptionsContainer"
+        app:layout_constraintTop_toBottomOf="@+id/bmAddOption" />
+
+    <TextView
+        android:id="@+id/bmRecipeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/recipe"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bmRecipeOption"
+        app:layout_constraintStart_toEndOf="@+id/bmRecipeIcon"
+        app:layout_constraintTop_toTopOf="@+id/bmRecipeOption" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bmCloseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/yellow_primary"
+        android:fontFamily="@font/comfortaa_semibold"
+        android:padding="5sp"
+        android:text="@string/close"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/bmOptionsContainer"
+        app:layout_constraintStart_toStartOf="@+id/bmOptionsContainer"
+        app:layout_constraintTop_toBottomOf="@+id/bmRecipeOption" />
+
+    <ImageView
+        android:id="@+id/bmRecipeIcon"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/recipe"
+        app:layout_constraintBottom_toBottomOf="@+id/bmRecipeLabel"
+        app:layout_constraintEnd_toStartOf="@+id/bmRecipeLabel"
+        app:layout_constraintStart_toStartOf="@+id/bmAddLabel"
+        app:layout_constraintTop_toTopOf="@+id/bmRecipeLabel"
+        app:srcCompat="@drawable/recipe" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

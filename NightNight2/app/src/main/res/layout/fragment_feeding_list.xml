@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/feedingList"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FeedingList">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/feedingListContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/feedingDateContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_primary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/feedingDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa_semibold"
+            android:text="@string/example"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/feedingDateContainer"
+            app:layout_constraintEnd_toEndOf="@+id/feedingDateContainer"
+            app:layout_constraintStart_toStartOf="@+id/feedingDateContainer"
+            app:layout_constraintTop_toTopOf="@+id/feedingDateContainer"
+            app:layout_constraintVertical_bias="0.592" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/feedingSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/blue_primary"
+            android:fontFamily="@font/comfortaa_semibold"
+            android:padding="5sp"
+            android:text="@string/summary"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/feedingChart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/feedingDateContainer" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/feedingChart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/blue_primary"
+            android:fontFamily="@font/comfortaa_semibold"
+            android:padding="5sp"
+            android:text="@string/chart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/feedingSummary"
+            app:layout_constraintTop_toBottomOf="@+id/feedingDateContainer" />
+
+        <ImageView
+            android:id="@+id/nappyChooseDateBtn2"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_marginEnd="15dp"
+            android:contentDescription="@string/back"
+            app:layout_constraintBottom_toBottomOf="@+id/feedingDate"
+            app:layout_constraintEnd_toEndOf="@+id/feedingDateContainer"
+            app:layout_constraintTop_toTopOf="@+id/feedingDate"
+            app:srcCompat="@drawable/next" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/feedingListHolder"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/feedingSummary">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/feedingNoRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_record"
+            android:textSize="40sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/feedingSummary" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
